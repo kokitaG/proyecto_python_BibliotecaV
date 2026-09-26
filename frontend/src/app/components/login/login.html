@@ -1,0 +1,23 @@
+<div style="max-width: 340px; margin: 60px auto; padding: 25px; border: 1px solid #ccc; border-radius: 8px; font-family: sans-serif; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+  <h2 style="text-align: center; margin-bottom: 20px;">Acceso al Sistema</h2>
+
+  <form (ngSubmit)="onLogin()">
+    <div style="margin-bottom: 15px;">
+      <label style="display: block; font-weight: bold; margin-bottom: 5px;">Usuario:</label>
+      <input type="text" [(ngModel)]="usuario" name="usuario" style="width: 100%; box-sizing: border-box; padding: 8px; border: 1px solid #ccc; border-radius: 4px;" required>
+    </div>
+
+    <div style="margin-bottom: 15px;">
+      <label style="display: block; font-weight: bold; margin-bottom: 5px;">Contraseña:</label>
+      <input type="password" [(ngModel)]="password" name="password" style="width: 100%; box-sizing: border-box; padding: 8px; border: 1px solid #ccc; border-radius: 4px;" required>
+    </div>
+
+    <button type="submit" style="width: 100%; padding: 10px; cursor: pointer; background-color: #2c3e50; color: white; border: none; border-radius: 4px; font-weight: bold;">
+      Ingresar
+    </button>
+  </form>
+
+  <div *ngIf="mensajeError" style="margin-top: 15px; padding: 10px; background-color: #fde8e8; border: 1px solid #f8b4b4; border-radius: 4px; color: #9b1c1c; text-align: center; font-size: 14px;">
+    ⚠️ {{ mensajeError }}
+  </div>
+</div>
